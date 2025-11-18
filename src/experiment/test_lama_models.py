@@ -1,32 +1,29 @@
 from ollama import Client
 
-
 def main():
-    # By default, this talks to http://127.0.0.1:11434
-    client = Client()
+    model_name = "llama3.2:3b"  # IMPORTANT: matches `ollama list`
+    client = Client()  # defaults to http://127.0.0.1:11434
 
-    model_name = "llama3.2:3"  # you can change to "llama3.2:3b" or "llama3:latest" later
+    print("=== test_lama_models.py ===")
+    print("Using model:", model_name)
 
-    print(f"Sending a test prompt to local model: {model_name} ...")
+    prompt = "Solve 3 + 5 and answer only with the number."
 
+    print("Sending a test prompt to local model...")
     response = client.chat(
         model=model_name,
         messages=[
-            {
-                "role": "user",
-                "content": "Solve 3 + 5 and answer only with the number.",
-            }
+            {"role": "user", "content": prompt},
         ],
     )
 
-    print("\nRaw response dict:")
+    print("\nRaw response object:")
     print(response)
 
-    # Extract the text content
-    content = response["message"]["content"]
     print("\nModel output content:")
-    print(content)
+    print(response["message"]["content"])
 
+    print("\n=== Done ===")
 
 if __name__ == "__main__":
     main()
