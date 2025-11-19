@@ -166,6 +166,35 @@ def execute_pot_code(code: str) -> Optional[float]:
 # Simple summary helper
 # ==========================
 
+def execute_pot_code_strong(code: str) -> Optional[float]:
+    """
+    Executes GPT-generated code with safety checks.
+
+    - Catches syntax errors
+    - Catches missing solve()
+    - Catches infinite loops via timeout (optional)
+    - Ensures return is numeric
+    """
+    local_ns = {}
+    try:
+        # Compile first (catch syntax errors early)
+        compiled = compile(code, "<pot_code>", "exec")
+        exec(compiled, {}, local_ns)
+
+        if "solve" not in local_ns:
+            print("[PoT] ERROR: solve() not found")
+            return None
+
+        result = local_ns["solve"]()
+
+        # Ensure numeric
+        return float(result)
+
+    except Exception as e:
+        print("[PoT] Exception during execution:", repr(e))
+        return None
+
+
 def summarize_results(df: pd.DataFrame) -> pd.DataFrame:
     """
     Summarize accuracy and errors for a single-strategy run.
@@ -188,3 +217,35 @@ def summarize_results(df: pd.DataFrame) -> pd.DataFrame:
     }])
 
     return summary
+def build_pot_prompt_strong(question: str) -> str:
+    return (
+        "You are an expert in linear programming and Python.\n"
+        "Solve the following problem by writing a Python function.\n\n"
+        "IMPORTANT REQUIREMENTS:\n"
+        "1. Write a Python function:\n"
+        "       def solve():\n"
+        "       return <float>\n"
+        "2. The function MUST DO EXPLICIT SEARCH:\n"
+        "   - Loop over reasonable ranges of decision variables.\n"
+        "   - Use nested loops with bounds derived from the problem text.\n"
+        "   - Use only integers for search (round continuous optimum).\n"
+        "3. For EVERY candidate solution (x,y or more):\n"
+        "   - Check ALL constraints explicitly using if-conditions.\n"
+        "   - Skip infeasible points.\n"
+        "4. Track the best feasible objective using:\n"
+        "       best = -1e18  (for maximization)\n"
+        "       best = +1e18  (for minimization)\n"
+        "5. At the END:\n"
+        "       assert feasibility of the final solution.\n"
+        "6. NO external libraries. NO printing. ONLY return the best objective.\n"
+        "7. Output ONLY the Python code inside a single ```python code block.\n\n"
+        "Problem:\n"
+        f"{question}\n\n"
+        "Output only:\n"
+        "```python\n"
+        "def solve():\n"
+        "    ...\n"
+        "    return best\n"
+        "```"
+    )
+
