@@ -34,6 +34,18 @@ def run_gpt5_pot_on_nl4opt(
     df = load_nl4opt(n_examples=n_examples, random_state=random_state)
     caller = GPT5Caller(model_name="gpt-5.1")
 
+        # --- Clean: keep only rows with numeric ground-truth answers ---
+    # Some items have labels like "No Best Solution" (infeasible/unbounded).
+    # For PoT numeric evaluation we only want examples with a real objective value.
+    
+
+    before = len(df)
+    df["en_answer_numeric"] = pd.to_numeric(df["en_answer"], errors="coerce")
+    df = df[df["en_answer_numeric"].notna()].reset_index(drop=True)
+    after = len(df)
+    print(f"[clean] Kept {after}/{before} examples with numeric ground truth.")
+
+
     results: List[Dict[str, Any]] = []
 
     total = len(df)
@@ -41,7 +53,8 @@ def run_gpt5_pot_on_nl4opt(
 
     for i, row in df.iterrows():
         question = row["en_question"]
-        gt = float(row["en_answer"])
+        gt = float(row["en_answer_numeric"])
+
 
         print(f"\n=== Example {i+1}/{total} ===")
         print("Question (truncated to 200 chars):")
