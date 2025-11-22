@@ -49,16 +49,16 @@ def run_gpt5_pot_strong(n_examples=None, random_state=0, tol=1e-3):
             verif = verify_answer_numeric(pred, gt, tol=tol)
             latency = time.time() - t0
 
-            print(f"Pred={pred}, correct={verif['correct']}, abs_err={verif['abs_error']}")
+            print(f"Pred={pred}, correct={verif['correct']}, abs_error={verif['abs_error']}")
 
             rows.append({
                 "example": i,
                 "gt": gt,
                 "pred": pred,
                 "correct": verif["correct"],
-                "abs_err": verif["abs_error"],
-                "rel_err": verif["rel_error"],
-                "latency": latency,
+                "abs_error": verif["abs_error"],
+                "rel_error": verif["rel_error"],
+                "latency_sec": latency,
             })
 
         except Exception as e:
@@ -68,9 +68,9 @@ def run_gpt5_pot_strong(n_examples=None, random_state=0, tol=1e-3):
                 "gt": gt,
                 "pred": None,
                 "correct": False,
-                "abs_err": None,
-                "rel_err": None,
-                "latency": None,
+                "abs_error": None,
+                "rel_error": None,
+                "latency_sec": None,
                 "error": repr(e),
             })
 

@@ -20,8 +20,7 @@ def main():
 
     models_to_test = [
         "gpt-4.1-mini",  # cheap sanity model
-        "gpt-4.1",
-        "gpt-5.1-mini",
+        "gpt-4.1",,
         "gpt-5.1",
     ]
 

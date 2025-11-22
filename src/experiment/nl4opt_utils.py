@@ -1,18 +1,18 @@
 # src/experiment/nl4opt_utils.py
-
 import os
 import re
 import time
 from typing import Any, Dict, List, Optional, Tuple
-
 import pandas as pd
 from dotenv import load_dotenv
 from openai import OpenAI
-
+import multiprocessing as mp
+from typing import Optional, Tuple, Any
 
 # ==========================
 # Dataset utilities
 # ==========================
+
 
 def load_nl4opt(n_examples: Optional[int] = None,
                 random_state: int = 0) -> pd.DataFrame:
@@ -166,33 +166,66 @@ def execute_pot_code(code: str) -> Optional[float]:
 # Simple summary helper
 # ==========================
 
-def execute_pot_code_strong(code: str) -> Optional[float]:
-    """
-    Executes GPT-generated code with safety checks.
 
-    - Catches syntax errors
-    - Catches missing solve()
-    - Catches infinite loops via timeout (optional)
-    - Ensures return is numeric
+
+
+def _run_solve_in_subprocess(code: str, queue: mp.Queue) -> None:
     """
-    local_ns = {}
+    Helper function executed in a subprocess.
+    It compiles the code, runs solve(), and puts either
+    the float result or an exception into the queue.
+    """
     try:
-        # Compile first (catch syntax errors early)
+        local_ns: dict[str, Any] = {}
         compiled = compile(code, "<pot_code>", "exec")
         exec(compiled, {}, local_ns)
 
         if "solve" not in local_ns:
-            print("[PoT] ERROR: solve() not found")
-            return None
+            queue.put(("error", "solve_not_found"))
+            return
 
         result = local_ns["solve"]()
-
-        # Ensure numeric
-        return float(result)
-
+        queue.put(("ok", float(result)))
     except Exception as e:
-        print("[PoT] Exception during execution:", repr(e))
+        queue.put(("error", repr(e)))
+
+
+def execute_pot_code_strong(code: str,
+                            timeout_sec: float = 3.0) -> Optional[float]:
+    """
+    Execute model-generated code safely with a timeout.
+
+    - Runs solve() in a separate process.
+    - If it finishes within timeout, return float(result).
+    - If it times out or errors, return None.
+    """
+    ctx = mp.get_context("spawn")  # safer on some platforms
+    queue: mp.Queue = ctx.Queue()
+    proc = ctx.Process(target=_run_solve_in_subprocess, args=(code, queue))
+    proc.start()
+    proc.join(timeout=timeout_sec)
+
+    if proc.is_alive():
+        # Too slow / possible infinite loop
+        proc.terminate()
+        proc.join()
+        print(f"[PoT] Timeout after {timeout_sec} seconds.")
         return None
+
+    # Process finished; read result
+    try:
+        status, value = queue.get_nowait()
+    except Exception:
+        print("[PoT] No result from subprocess.")
+        return None
+
+    if status == "ok":
+        return value
+    else:
+        print("[PoT] Error in subprocess:", value)
+        return None
+
+    
 
 
 def summarize_results(df: pd.DataFrame) -> pd.DataFrame:
@@ -239,6 +272,10 @@ def build_pot_prompt_strong(question: str) -> str:
         "       assert feasibility of the final solution.\n"
         "6. NO external libraries. NO printing. ONLY return the best objective.\n"
         "7. Output ONLY the Python code inside a single ```python code block.\n\n"
+        "8. Before writing loops, compute safe upper bounds for each variable from the data.\n"
+        "   For example, if the budget is B and each unit costs at least c_min,\n"
+        "   then the number of units is at most floor(B / c_min).\n"
+        "   Use these bounds in your ranges, never loop beyond them.\n"
         "Problem:\n"
         f"{question}\n\n"
         "Output only:\n"
