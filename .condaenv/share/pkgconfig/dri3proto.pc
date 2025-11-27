@@ -1,0 +1,7 @@
+prefix=/work/zsaraylo/LLM-Reasoning-Benchmarks/.condaenv
+includedir=${prefix}/include
+ 
+Name: DRI3Proto
+Description: DRI3 extension headers
+Version: 1.4
+Cflags: -I${includedir}

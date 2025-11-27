@@ -17,6 +17,85 @@ import matplotlib.pyplot as plt
 import numpy as np
 import pandas as pd
 
+# === Shared LiveMathBench answer utilities ===
+import re
+from fractions import Fraction
+from typing import Any, Dict, Optional
+
+
+def _try_parse_float(s: str) -> Optional[float]:
+    """
+    Try to parse a string as float. Return None on failure.
+    """
+    try:
+        s_norm = (
+            s.replace("$", "")
+             .replace("\\(", "")
+             .replace("\\)", "")
+             .strip()
+        )
+        return float(s_norm)
+    except Exception:
+        return None
+
+
+def normalize_answer_str(ans: Any) -> str:
+    """
+    Convert answer to a canonical string form for comparison.
+      - Fraction -> "p/q"
+      - int/float -> normalized decimal
+      - else -> string with LaTeX removed and whitespace collapsed
+    """
+    if isinstance(ans, Fraction):
+        return f"{ans.numerator}/{ans.denominator}"
+    if isinstance(ans, (int, float)):
+        return ("{:.12g}".format(float(ans))).strip()
+
+    s = str(ans)
+    s = s.replace("$", "").replace("\\(", "").replace("\\)", "")
+    s = s.strip()
+    s = re.sub(r"\s+", "", s)
+    return s.lower()
+
+
+def verify_math_answer(pred: Any, gold: str, tol: float = 1e-6) -> Dict[str, Any]:
+    """
+    Compare model prediction (string/number) vs gold string.
+    1) Try numeric comparison if both parse as floats.
+    2) Also compare normalized strings.
+    """
+    if pred is None:
+        return {
+            "correct": False,
+            "numeric_match": False,
+            "string_match": False,
+            "pred_norm": None,
+            "gold_norm": normalize_answer_str(gold),
+        }
+
+    gold_float = _try_parse_float(gold)
+
+    if isinstance(pred, (int, float)):
+        pred_float = float(pred)
+    else:
+        pred_float = _try_parse_float(str(pred))
+
+    numeric_match = False
+    if gold_float is not None and pred_float is not None:
+        if abs(pred_float - gold_float) <= tol * max(1.0, abs(gold_float)):
+            numeric_match = True
+
+    pred_norm = normalize_answer_str(pred)
+    gold_norm = normalize_answer_str(gold)
+    string_match = (pred_norm == gold_norm)
+
+    return {
+        "correct": numeric_match or string_match,
+        "numeric_match": numeric_match,
+        "string_match": string_match,
+        "pred_norm": pred_norm,
+        "gold_norm": gold_norm,
+    }
 
 # ---------------------------------------------------------
 # Helpers

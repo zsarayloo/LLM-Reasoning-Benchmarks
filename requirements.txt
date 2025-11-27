@@ -1,0 +1,15 @@
+torch
+transformers==4.43.3
+accelerate
+sentencepiece
+huggingface_hub
+openai
+numpy
+pandas
+scipy
+sympy
+tqdm
+python-dotenv
+matplotlib
+seaborn
+gurobipy
