@@ -1,7 +1,16 @@
 import numpy as np
 import torch
+import os
+import sys
 
-from models.llama3_3b_loader import load_llama3_3b
+# Add src/ to sys.path so "utils" is importable
+THIS_DIR = os.path.dirname(__file__)
+SRC_ROOT = os.path.abspath(os.path.join(THIS_DIR, ".."))
+if SRC_ROOT not in sys.path:
+    sys.path.append(SRC_ROOT)
+
+
+from model.lama3_3b_loader import load_llama3_3b
 from utils.steer import SteeringHook
 
 tokenizer, model = load_llama3_3b()
