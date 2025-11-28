@@ -1,0 +1,98 @@
+[
+  {
+    "idx": 38,
+    "question": "If 2a + 4 = 14, what is a?",
+    "gold_answer": "5",
+    "type": "algebra"
+  },
+  {
+    "idx": 39,
+    "question": "What is (27 + 23) \u00d7 12?",
+    "gold_answer": "600",
+    "type": "multi_step"
+  },
+  {
+    "idx": 40,
+    "question": "What is 138 \u00f7 11? Give the whole number result.",
+    "gold_answer": "12",
+    "type": "division"
+  },
+  {
+    "idx": 41,
+    "question": "What is 10% of 250?",
+    "gold_answer": "25",
+    "type": "percentage"
+  },
+  {
+    "idx": 42,
+    "question": "What is (29 + 15) \u00d7 16?",
+    "gold_answer": "704",
+    "type": "multi_step"
+  },
+  {
+    "idx": 43,
+    "question": "What is 20% of 150?",
+    "gold_answer": "30",
+    "type": "percentage"
+  },
+  {
+    "idx": 44,
+    "question": "If a train travels 240 miles in 4 hours, what is its average speed in miles per hour?",
+    "gold_answer": "60",
+    "type": "rate_word"
+  },
+  {
+    "idx": 45,
+    "question": "What is (15 + 13) \u00d7 7?",
+    "gold_answer": "196",
+    "type": "multi_step"
+  },
+  {
+    "idx": 46,
+    "question": "What is (28 + 17) \u00d7 5?",
+    "gold_answer": "225",
+    "type": "multi_step"
+  },
+  {
+    "idx": 47,
+    "question": "What is (49 + 12) \u00d7 10?",
+    "gold_answer": "610",
+    "type": "multi_step"
+  },
+  {
+    "idx": 48,
+    "question": "What is 117 \u00f7 11? Give the whole number result.",
+    "gold_answer": "10",
+    "type": "division"
+  },
+  {
+    "idx": 49,
+    "question": "What is 99 \u00f7 7? Give the whole number result.",
+    "gold_answer": "14",
+    "type": "division"
+  },
+  {
+    "idx": 50,
+    "question": "If a book has 240 pages and you read 15 pages per day, how many days will it take to finish?",
+    "gold_answer": "16",
+    "type": "division_word"
+  },
+  {
+    "idx": 51,
+    "question": "What is (18 + 13) \u00d7 7?",
+    "gold_answer": "217",
+    "type": "multi_step"
+  },
+  {
+    "idx": 52,
+    "question": "What is (41 + 24) \u00d7 6?",
+    "gold_answer": "390",
+    "type": "multi_step"
+  },
+  {
+    "idx": 53,
+    "question": "A rectangle has length 12 and width 8. What is its area?",
+    "gold_answer": "96",
+    "type": "geometry"
+  }
+]

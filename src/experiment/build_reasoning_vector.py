@@ -8,8 +8,8 @@ import numpy as np
 THIS_DIR = os.path.dirname(__file__)
 PROJECT_ROOT = os.path.abspath(os.path.join(THIS_DIR, "..", ".."))
 
-H_POS_PATH = os.path.join(PROJECT_ROOT, "H_pos.npy")
-H_NEG_PATH = os.path.join(PROJECT_ROOT, "H_neg.npy")
+H_POS_PATH = os.path.join(PROJECT_ROOT, "H_pos_train.npy")
+H_NEG_PATH = os.path.join(PROJECT_ROOT, "H_neg_train.npy")
 
 # Where to save the reasoning vector
 MODEL_DIR = os.path.join(PROJECT_ROOT, "model")

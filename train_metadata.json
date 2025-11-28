@@ -1,0 +1,335 @@
+[
+  {
+    "idx": 1,
+    "question": "What is (18 + 20) \u00d7 7?",
+    "gold_answer": "266",
+    "predicted_answer": "266",
+    "raw_response": "## Step 1: First, we need to solve the expression inside the parentheses, which is 18 + 20.\n18 + 20 = 38.\n\n## Step 2: Now that we have the result of the expression inside the parentheses, we can multiply it by 7.\n38 \u00d7 7 = 266.\n\nThe final answer is: $\\boxed{266}$",
+    "is_correct": true,
+    "type": "multi_step"
+  },
+  {
+    "idx": 2,
+    "question": "What is 131 \u00f7 10? Give the whole number result.",
+    "gold_answer": "13",
+    "predicted_answer": "13",
+    "raw_response": "## Step 1: Understand the problem\nWe need to divide 131 by 10 to find the whole number result.\n\n## Step 2: Perform the division\n131 \u00f7 10 = 13.1\n\n## Step 3: Identify the whole number result\nSince we are asked to give the whole number result, we need to round down to the nearest whole number.\n\n## Step 4: Round down to the nearest whole number\n13.1 rounded down to the nearest whole number is 13.\n\nThe final answer is: $\\boxed{13}$",
+    "is_correct": true,
+    "type": "division"
+  },
+  {
+    "idx": 3,
+    "question": "What is 60 \u00f7 15? Give the whole number result.",
+    "gold_answer": "4",
+    "predicted_answer": "4",
+    "raw_response": "## Step 1: Understand the problem\nWe need to divide 60 by 15 and provide the whole number result.\n\n## Step 2: Perform the division\nTo divide 60 by 15, we will perform the division operation.\n\n## Step 3: Calculate the result\n60 \u00f7 15 = 4\n\nThe final answer is: $\\boxed{4}$",
+    "is_correct": true,
+    "type": "division"
+  },
+  {
+    "idx": 4,
+    "question": "What is (17 + 29) \u00d7 11?",
+    "gold_answer": "506",
+    "predicted_answer": "506",
+    "raw_response": "## Step 1: First, we need to solve the expression inside the parentheses, which is (17 + 29).\nWe add 17 and 29 together to get 46.\n\n## Step 2: Next, we multiply the result from step 1 by 11.\nWe take the result from step 1, which is 46, and multiply it by 11.\n\n## Step 3: Calculate the multiplication of 46 by 11.\n46 \u00d7 11 = 506.\n\nThe final answer is: $\\boxed{506}$",
+    "is_correct": true,
+    "type": "multi_step"
+  },
+  {
+    "idx": 5,
+    "question": "What is 190 \u00f7 14? Give the whole number result.",
+    "gold_answer": "13",
+    "predicted_answer": "13",
+    "raw_response": "## Step 1: Divide 190 by 14\nTo find the quotient of 190 divided by 14, we will perform long division.\n\n## Step 2: Perform the long division\nWe start by dividing 190 by 14. We can do this by first dividing 190 by 10, which gives us 19. Then we multiply 19 by 10, which gives us 190. We subtract 190 from 190, which gives us 0. Since we have obtained a remainder of 0, we can stop the division process.\n\n## Step 3: Write the final result\nSince we obtained a remainder of 0, the quotient of 190 divided by 14 is 13.666... However, we are asked to give the whole number result, so we will round down to 13.\n\nThe final answer is: $\\boxed{13}$",
+    "is_correct": true,
+    "type": "division"
+  },
+  {
+    "idx": 6,
+    "question": "A store has 144 apples. They sell 3/4 of them. How many apples are left?",
+    "gold_answer": "36",
+    "predicted_answer": "36",
+    "raw_response": "## Step 1: Calculate the number of apples sold\nTo find out how many apples are left, we first need to calculate how many apples were sold. The store sold 3/4 of the 144 apples.\n\n## Step 2: Convert the fraction to a decimal or find a common denominator to calculate the number of apples sold\nSince 3/4 can also be represented as 0.75 in decimal form, we can multiply 144 by 0.75 to find out how many apples were sold.\n\n## Step 3: Calculate the number of apples sold\nApples sold = 144 * 0.75 = 108.\n\n## Step 4: Calculate the number of apples left\nTo find out how many apples are left, we subtract the number of apples sold from the total number of apples.\n\n## Step 5: Perform the subtraction\nApples left = Total apples - Apples sold = 144 - 108 = 36.\n\nThe final answer is: $\\boxed{36}$",
+    "is_correct": true,
+    "type": "fraction_word"
+  },
+  {
+    "idx": 7,
+    "question": "What is 169 \u00f7 15? Give the whole number result.",
+    "gold_answer": "11",
+    "predicted_answer": "11",
+    "raw_response": "## Step 1: Divide 169 by 15\nTo find the quotient of 169 divided by 15, we will perform long division.\n\n## Step 2: Perform long division\nWe start by dividing 169 by 15. We can see that 15 goes into 169 approximately 11 times, since 15 * 11 = 165.\n\n## Step 3: Calculate the remainder\nWe subtract 165 from 169, which gives us 4. This means we have a remainder of 4.\n\n## Step 4: Write the result\nSince we have a remainder, the result of the division is not a whole number. However, we can express it as a mixed number or a decimal. In this case, we can express it as a decimal.\n\n## Step 5: Express the result as a decimal\nThe result of 169 \u00f7 15 is 11.26666667.\n\n## Step 6: Round the result to the nearest whole number\nSince the problem asks for the whole number result, we round 11.26666667 to the nearest whole number.\n\nThe final answer is: $\\boxed{11}$",
+    "is_correct": true,
+    "type": "division"
+  },
+  {
+    "idx": 8,
+    "question": "If a car travels 60 miles per hour for 2.5 hours, how many miles does it travel?",
+    "gold_answer": "150",
+    "predicted_answer": "150",
+    "raw_response": "## Step 1: Understand the problem\nWe need to calculate the total distance traveled by a car that moves at a constant speed of 60 miles per hour for 2.5 hours.\n\n## Step 2: Recall the formula for distance\nThe formula for distance is Distance = Speed \u00d7 Time.\n\n## Step 3: Plug in the values\nGiven that the speed is 60 miles per hour and the time is 2.5 hours, we can calculate the distance by multiplying these two values.\n\n## Step 4: Perform the calculation\nDistance = 60 miles/hour \u00d7 2.5 hours = 150 miles.\n\nThe final answer is: $\\boxed{150}$",
+    "is_correct": true,
+    "type": "rate_word"
+  },
+  {
+    "idx": 9,
+    "question": "What is 61 \u00f7 8? Give the whole number result.",
+    "gold_answer": "7",
+    "predicted_answer": "7",
+    "raw_response": "## Step 1: Divide 61 by 8\nTo find the result of 61 \u00f7 8, we need to divide 61 by 8.\n\n## Step 2: Perform the division\n61 \u00f7 8 = 7.625\n\n## Step 3: Identify the whole number result\nSince the problem asks for the whole number result, we need to identify the whole number part of the result.\n\n## Step 4: Extract the whole number part\nThe whole number part of 7.625 is 7.\n\nThe final answer is: $\\boxed{7}$",
+    "is_correct": true,
+    "type": "division"
+  },
+  {
+    "idx": 10,
+    "question": "What is (37 + 12) \u00d7 18?",
+    "gold_answer": "882",
+    "predicted_answer": "882",
+    "raw_response": "## Step 1: First, we need to solve the expression inside the parentheses, which is 37 + 12.\n37 + 12 = 49.\n\n## Step 2: Now that we have the result of the expression inside the parentheses, we can rewrite the original problem as 49 \u00d7 18.\n\n## Step 3: To find the product of 49 and 18, we multiply these two numbers together.\n49 \u00d7 18 = 882.\n\nThe final answer is: $\\boxed{882}$",
+    "is_correct": true,
+    "type": "multi_step"
+  },
+  {
+    "idx": 11,
+    "question": "If 3y = 21, what is y?",
+    "gold_answer": "7",
+    "predicted_answer": "7",
+    "raw_response": "## Step 1: Understand the equation given\nThe equation given is 3y = 21. This is a simple linear equation where we need to isolate the variable y.\n\n## Step 2: Isolate the variable y\nTo isolate y, we need to get y by itself on one side of the equation. Since y is multiplied by 3, we need to find the inverse operation of multiplication, which is division.\n\n## Step 3: Divide both sides of the equation by 3\nDividing both sides of the equation 3y = 21 by 3 will give us the value of y. This operation cancels out the 3 on the left side of the equation, leaving us with y on the left side.\n\n## Step 4: Perform the division\n21 divided by 3 equals 7.\n\n## Step 5: Write the final value of y\nAfter performing the division, we find that y equals 7.\n\nThe final answer is: $\\boxed{7}$",
+    "is_correct": true,
+    "type": "algebra"
+  },
+  {
+    "idx": 12,
+    "question": "What is 170 \u00f7 8? Give the whole number result.",
+    "gold_answer": "21",
+    "predicted_answer": "21",
+    "raw_response": "## Step 1: Divide 170 by 8\nTo find the result of 170 \u00f7 8, we need to divide 170 by 8.\n\n## Step 2: Perform the division\n170 \u00f7 8 = 21.25\n\n## Step 3: Identify the whole number result\nSince the problem asks for the whole number result, we need to identify the whole part of the quotient.\n\n## Step 4: Extract the whole number\nThe whole number part of 21.25 is 21.\n\nThe final answer is: $\\boxed{21}$",
+    "is_correct": true,
+    "type": "division"
+  },
+  {
+    "idx": 13,
+    "question": "What is 40% of 75?",
+    "gold_answer": "30",
+    "predicted_answer": "30",
+    "raw_response": "## Step 1: Understand the problem\nTo find 40% of 75, we need to calculate 40% of the number 75.\n\n## Step 2: Convert percentage to decimal\nFirst, we convert 40% to a decimal by dividing by 100. So, 40% becomes 0.4.\n\n## Step 3: Multiply the decimal by the number\nNow, we multiply 0.4 by 75 to find 40% of 75.\n\n## Step 4: Perform the calculation\n0.4 * 75 = 30\n\nThe final answer is: $\\boxed{30}$",
+    "is_correct": true,
+    "type": "percentage"
+  },
+  {
+    "idx": 14,
+    "question": "What is 95 \u00f7 9? Give the whole number result.",
+    "gold_answer": "10",
+    "predicted_answer": "11",
+    "raw_response": "## Step 1: Divide 95 by 9\nTo find the result of 95 \u00f7 9, we need to divide 95 by 9.\n\n## Step 2: Perform the division\n95 \u00f7 9 = 10.55555556\n\n## Step 3: Round the result to the nearest whole number\nSince the problem asks for the whole number result, we need to round 10.55555556 to the nearest whole number.\n\n## Step 4: Determine the final answer\nRounding 10.55555556 to the nearest whole number gives us 11.\n\nThe final answer is: $\\boxed{11}$",
+    "is_correct": false,
+    "type": "division"
+  },
+  {
+    "idx": 15,
+    "question": "What is 15% of 120?",
+    "gold_answer": "18",
+    "predicted_answer": "18",
+    "raw_response": "## Step 1: Understand the problem\nTo find 15% of 120, we need to calculate 15% of the number 120.\n\n## Step 2: Convert percentage to decimal\nFirst, we convert the percentage to a decimal by dividing by 100. So, 15% becomes 15/100 = 0.15.\n\n## Step 3: Multiply the decimal by the number\nNow, we multiply 0.15 by 120 to find 15% of 120.\n\n## Step 4: Perform the multiplication\n0.15 * 120 = 18.\n\nThe final answer is: $\\boxed{18}$",
+    "is_correct": true,
+    "type": "percentage"
+  },
+  {
+    "idx": 16,
+    "question": "A pizza is cut into 8 equal slices. If you eat 3 slices, what fraction of the pizza is left?",
+    "gold_answer": "5",
+    "predicted_answer": "8",
+    "raw_response": "## Step 1: Determine the total number of slices in the pizza.\nThe pizza is cut into 8 equal slices.\n\n## Step 2: Calculate the number of slices eaten.\nYou eat 3 slices of the pizza.\n\n## Step 3: Calculate the number of slices left.\nTo find the number of slices left, subtract the number of slices eaten from the total number of slices. slices_left = total_slices - slices_eaten = 8 - 3 = 5\n\n## Step 4: Calculate the fraction of the pizza left.\nTo find the fraction of the pizza left, divide the number of slices left by the total number of slices. fraction_left = slices_left / total_slices = 5 / 8\n\nThe final answer is: $\\boxed{\\frac{5}{8}}$",
+    "is_correct": false,
+    "type": "fraction_word"
+  },
+  {
+    "idx": 17,
+    "question": "What is (45 + 11) \u00d7 16?",
+    "gold_answer": "896",
+    "predicted_answer": "896",
+    "raw_response": "## Step 1: First, we need to solve the expression inside the parentheses, which is 45 + 11.\nWe add 45 and 11 to get 56.\n\n## Step 2: Next, we multiply the result from step 1 by 16.\nWe multiply 56 by 16 to get 896.\n\nThe final answer is: $\\boxed{896}$",
+    "is_correct": true,
+    "type": "multi_step"
+  },
+  {
+    "idx": 18,
+    "question": "What is 156 \u00f7 8? Give the whole number result.",
+    "gold_answer": "19",
+    "predicted_answer": "19",
+    "raw_response": "## Step 1: Divide 156 by 8\nTo find the result of 156 \u00f7 8, we need to divide 156 by 8.\n\n## Step 2: Perform the division\n156 \u00f7 8 = 19.5\n\n## Step 3: Identify the whole number result\nSince the problem asks for the whole number result, we need to identify the whole number part of the result.\n\n## Step 4: Provide the whole number result\nThe whole number part of 19.5 is 19.\n\nThe final answer is: $\\boxed{19}$",
+    "is_correct": true,
+    "type": "division"
+  },
+  {
+    "idx": 19,
+    "question": "What is (25 + 18) \u00d7 9?",
+    "gold_answer": "387",
+    "predicted_answer": "387",
+    "raw_response": "## Step 1: First, we need to solve the expression inside the parentheses, which is 25 + 18.\nWe add 25 and 18 together to get 43.\n\n## Step 2: Next, we multiply the result from step 1 by 9.\nWe take the result from step 1, which is 43, and multiply it by 9.\n\n## Step 3: Calculate the multiplication of 43 by 9.\n43 \u00d7 9 = 387.\n\nThe final answer is: $\\boxed{387}$",
+    "is_correct": true,
+    "type": "multi_step"
+  },
+  {
+    "idx": 20,
+    "question": "What is 169 \u00f7 7? Give the whole number result.",
+    "gold_answer": "24",
+    "predicted_answer": "24",
+    "raw_response": "## Step 1: Divide 169 by 7\nTo find the quotient of 169 divided by 7, we will perform long division.\n\n## Step 2: Perform long division\nWe start by dividing 169 by 7. We can see that 7 goes into 169 approximately 24 times, since 7 * 24 = 168.\n\n## Step 3: Calculate the remainder\nWe then multiply 7 by 24 to get 168, and subtract 168 from 169 to get 1. This means we have a remainder of 1.\n\n## Step 4: Write the result\nSince we have a remainder of 1, we can write the result of 169 \u00f7 7 as 24 with a remainder of 1.\n\n## Step 5: Provide the whole number result\nHowever, the question asks for the whole number result. In this case, the whole number result is 24.\n\nThe final answer is: $\\boxed{24}$",
+    "is_correct": true,
+    "type": "division"
+  },
+  {
+    "idx": 21,
+    "question": "What is 50% of 90?",
+    "gold_answer": "45",
+    "predicted_answer": "45",
+    "raw_response": "## Step 1: Understand the problem\nTo find 50% of 90, we need to calculate half of 90.\n\n## Step 2: Calculate 50% of 90\n50% of a number is the same as half of that number. So, we need to divide 90 by 2.\n\n## Step 3: Perform the division\n90 / 2 = 45\n\nThe final answer is: $\\boxed{45}$",
+    "is_correct": true,
+    "type": "percentage"
+  },
+  {
+    "idx": 22,
+    "question": "What is (20 + 13) \u00d7 19?",
+    "gold_answer": "627",
+    "predicted_answer": "627",
+    "raw_response": "## Step 1: First, we need to solve the expression inside the parentheses, which is 20 + 13.\nWe add 20 and 13 to get 33.\n\n## Step 2: Now that we have the result of the expression inside the parentheses, we can rewrite the original problem as 33 \u00d7 19.\nWe need to multiply 33 by 19.\n\n## Step 3: Multiply 33 by 19.\n33 \u00d7 19 = 627.\n\nThe final answer is: $\\boxed{627}$",
+    "is_correct": true,
+    "type": "multi_step"
+  },
+  {
+    "idx": 23,
+    "question": "If you save $12 per week for 6 weeks, how much money do you save in total?",
+    "gold_answer": "72",
+    "predicted_answer": "72",
+    "raw_response": "## Step 1: Determine the amount saved per week\nThe amount saved per week is given as $12.\n\n## Step 2: Determine the number of weeks\nThe number of weeks is given as 6.\n\n## Step 3: Calculate the total amount saved\nTo find the total amount saved, we multiply the amount saved per week by the number of weeks. total_saved = amount_saved_per_week * number_of_weeks = $12 * 6.\n\n## Step 4: Perform the multiplication\n$12 * 6 = $72.\n\nThe final answer is: $\\boxed{72}$",
+    "is_correct": true,
+    "type": "multiplication_word"
+  },
+  {
+    "idx": 24,
+    "question": "What is 95 \u00f7 15? Give the whole number result.",
+    "gold_answer": "6",
+    "predicted_answer": "6",
+    "raw_response": "## Step 1: Divide 95 by 15\nTo find the result of 95 \u00f7 15, we need to divide 95 by 15.\n\n## Step 2: Perform the division\n95 \u00f7 15 = 6.3333...\n\n## Step 3: Identify the whole number result\nSince the problem asks for the whole number result, we need to round down to the nearest whole number.\n\n## Step 4: Round down to the nearest whole number\n6.3333... rounded down to the nearest whole number is 6.\n\nThe final answer is: $\\boxed{6}$",
+    "is_correct": true,
+    "type": "division"
+  },
+  {
+    "idx": 25,
+    "question": "A box contains 48 chocolates arranged in 6 equal rows. How many chocolates are in each row?",
+    "gold_answer": "8",
+    "predicted_answer": "8",
+    "raw_response": "## Step 1: Determine the total number of chocolates\nThe total number of chocolates in the box is given as 48.\n\n## Step 2: Determine the number of rows\nThe chocolates are arranged in 6 equal rows.\n\n## Step 3: Calculate the number of chocolates in each row\nTo find the number of chocolates in each row, we need to divide the total number of chocolates by the number of rows. This can be calculated as 48 \u00f7 6.\n\n## Step 4: Perform the division\n48 \u00f7 6 = 8\n\nThe final answer is: $\\boxed{8}$",
+    "is_correct": true,
+    "type": "division_word"
+  },
+  {
+    "idx": 26,
+    "question": "If x - 9 = 12, what is x?",
+    "gold_answer": "21",
+    "predicted_answer": "21",
+    "raw_response": "## Step 1: Understand the equation\nThe given equation is x - 9 = 12. This is a linear equation in one variable, x.\n\n## Step 2: Isolate the variable\nTo solve for x, we need to isolate the variable on one side of the equation. We can do this by adding 9 to both sides of the equation.\n\n## Step 3: Add 9 to both sides\nx - 9 + 9 = 12 + 9\n\n## Step 4: Simplify the equation\nx = 21\n\nThe final answer is: $\\boxed{21}$",
+    "is_correct": true,
+    "type": "algebra"
+  },
+  {
+    "idx": 27,
+    "question": "What is 35% of 40?",
+    "gold_answer": "14",
+    "predicted_answer": "14",
+    "raw_response": "## Step 1: Understand the problem\nTo find 35% of 40, we need to calculate 35% of the number 40.\n\n## Step 2: Convert percentage to decimal\nFirst, we convert 35% to a decimal by dividing by 100: 35 / 100 = 0.35.\n\n## Step 3: Multiply the decimal by the number\nNow, we multiply 0.35 by 40 to find 35% of 40: 0.35 * 40 = 14.\n\nThe final answer is: $\\boxed{14}$",
+    "is_correct": true,
+    "type": "percentage"
+  },
+  {
+    "idx": 28,
+    "question": "If x + 7 = 15, what is x?",
+    "gold_answer": "8",
+    "predicted_answer": "8",
+    "raw_response": "## Step 1: Understand the problem\nWe are given an equation x + 7 = 15 and we need to solve for x.\n\n## Step 2: Isolate the variable x\nTo isolate x, we need to get x by itself on one side of the equation. We can do this by subtracting 7 from both sides of the equation.\n\n## Step 3: Subtract 7 from both sides\nx + 7 - 7 = 15 - 7\n\n## Step 4: Simplify the equation\nx = 8\n\nThe final answer is: $\\boxed{8}$",
+    "is_correct": true,
+    "type": "algebra"
+  },
+  {
+    "idx": 29,
+    "question": "What is 25% of 80?",
+    "gold_answer": "20",
+    "predicted_answer": "20",
+    "raw_response": "## Step 1: Understand the problem\nTo find 25% of 80, we need to calculate 25% of the number 80.\n\n## Step 2: Convert percentage to decimal\nFirst, we convert 25% to a decimal by dividing by 100. So, 25% = 25/100 = 0.25.\n\n## Step 3: Multiply the decimal by the number\nNow, we multiply 0.25 by 80 to find 25% of 80. 0.25 * 80 = 20.\n\nThe final answer is: $\\boxed{20}$",
+    "is_correct": true,
+    "type": "percentage"
+  },
+  {
+    "idx": 30,
+    "question": "What is 84 \u00f7 11? Give the whole number result.",
+    "gold_answer": "7",
+    "predicted_answer": "2",
+    "raw_response": "## Step 1: Divide 84 by 11\nTo find the quotient of 84 divided by 11, we will perform long division.\n\n## Step 2: Perform long division\nWe start by dividing 84 by 11. We can do this by first dividing 80 by 11, which gives us 7 with a remainder of 2. Then, we bring down the next digit, which is 4, and divide 24 by 11, which gives us 2 with a remainder of 2.\n\n## Step 3: Write the result\nSince we have a remainder of 2, we can write the result as 7 with a remainder of 2.\n\n## Step 4: Write the final answer\nThe final answer is: $\\boxed{7}$\n\nHowever, the question asks for the whole number result, so we need to re-evaluate our answer.\n\n## Step 5: Re-evaluate the answer\nSince we have a remainder of 2, we can write the result as 7 with a remainder of 2. This means that 84 \u00f7 11 = 7 + 2/11.\n\n## Step 6: Write the final answer\nThe final answer is: $\\boxed{7}$\n\nHowever, the question asks for the whole number result, so we need to re-evaluate our answer.\n\n## Step 7: Re-evaluate the answer\nSince we have a remainder of 2, we can write the result as 7 with a remainder of 2. This means that 84 \u00f7 11 = 7 + 2/11.\n\n## Step 8: Write the final answer\nThe final answer is: $\\boxed{7}$\n\nHowever, the question asks for the whole number result, so we need to re-evaluate our answer.\n\n## Step 9: Re-evaluate the answer\nSince we have a remainder of 2, we can write the result as",
+    "is_correct": false,
+    "type": "division"
+  },
+  {
+    "idx": 31,
+    "question": "What is 67 \u00f7 10? Give the whole number result.",
+    "gold_answer": "6",
+    "predicted_answer": "6",
+    "raw_response": "## Step 1: Understand the problem\nWe need to divide 67 by 10 to find the whole number result.\n\n## Step 2: Perform the division\nTo divide 67 by 10, we can use long division or a calculator. However, since we are looking for the whole number result, we can simply divide 67 by 10.\n\n## Step 3: Calculate the result\n67 \u00f7 10 = 6.7\n\n## Step 4: Identify the whole number result\nSince the problem asks for the whole number result, we need to round down the decimal part. In this case, the whole number result is 6.\n\nThe final answer is: $\\boxed{6}$",
+    "is_correct": true,
+    "type": "division"
+  },
+  {
+    "idx": 32,
+    "question": "What is (45 + 21) \u00d7 15?",
+    "gold_answer": "990",
+    "predicted_answer": "990",
+    "raw_response": "## Step 1: First, we need to solve the expression inside the parentheses, which is 45 + 21.\nWe add 45 and 21 together to get 66.\n\n## Step 2: Now that we have the result of the expression inside the parentheses, we can rewrite the original problem as 66 \u00d7 15.\nWe need to multiply 66 by 15.\n\n## Step 3: Multiply 66 by 15.\n66 \u00d7 15 = 990.\n\nThe final answer is: $\\boxed{990}$",
+    "is_correct": true,
+    "type": "multi_step"
+  },
+  {
+    "idx": 33,
+    "question": "If 4b = 32, what is b?",
+    "gold_answer": "8",
+    "predicted_answer": "8",
+    "raw_response": "## Step 1: Understand the problem\nWe are given the equation 4b = 32 and we need to solve for the value of b.\n\n## Step 2: Isolate the variable b\nTo isolate b, we need to get rid of the 4 that is being multiplied by b. We can do this by dividing both sides of the equation by 4.\n\n## Step 3: Perform the division\nDividing both sides of the equation by 4 gives us b = 32 / 4.\n\n## Step 4: Simplify the expression\n32 divided by 4 is 8.\n\nThe final answer is: $\\boxed{8}$",
+    "is_correct": true,
+    "type": "algebra"
+  },
+  {
+    "idx": 34,
+    "question": "What is 30% of 60?",
+    "gold_answer": "18",
+    "predicted_answer": "18",
+    "raw_response": "## Step 1: Understand the problem\nTo find 30% of 60, we need to calculate 30% of the number 60.\n\n## Step 2: Convert percentage to decimal\nFirst, we convert 30% to a decimal by dividing by 100. So, 30% becomes 0.3.\n\n## Step 3: Multiply the decimal by the number\nNow, we multiply 0.3 by 60 to find 30% of 60.\n\n## Step 4: Perform the calculation\n0.3 * 60 = 18\n\nThe final answer is: $\\boxed{18}$",
+    "is_correct": true,
+    "type": "percentage"
+  },
+  {
+    "idx": 35,
+    "question": "A classroom has 5 rows of desks with 6 desks in each row. If 4 desks are empty, how many desks are occupied?",
+    "gold_answer": "26",
+    "predicted_answer": "26",
+    "raw_response": "## Step 1: Calculate the total number of desks in the classroom.\nTo find the total number of desks, we multiply the number of rows by the number of desks in each row. total_desks = 5 rows * 6 desks/row = 30 desks.\n\n## Step 2: Subtract the number of empty desks from the total number of desks to find the number of occupied desks.\noccupied_desks = total_desks - empty_desks = 30 desks - 4 desks = 26 desks.\n\nThe final answer is: $\\boxed{26}$",
+    "is_correct": true,
+    "type": "multi_step_word"
+  },
+  {
+    "idx": 36,
+    "question": "What is (26 + 11) \u00d7 13?",
+    "gold_answer": "481",
+    "predicted_answer": "481",
+    "raw_response": "## Step 1: First, we need to solve the expression inside the parentheses, which is 26 + 11.\nWe add 26 and 11 to get 37.\n\n## Step 2: Now that we have the result of the expression inside the parentheses, we can rewrite the original problem as 37 \u00d7 13.\nWe need to multiply 37 by 13.\n\n## Step 3: Multiply 37 by 13.\n37 \u00d7 13 = 481.\n\nThe final answer is: $\\boxed{481}$",
+    "is_correct": true,
+    "type": "multi_step"
+  },
+  {
+    "idx": 37,
+    "question": "If you buy 3 items for $15 each and pay with a $50 bill, how much change do you get?",
+    "gold_answer": "5",
+    "predicted_answer": "5",
+    "raw_response": "## Step 1: Calculate the total cost of the items\nTo find the total cost of the items, we multiply the number of items by the cost of each item. total_cost = 3 * $15 = $45.\n\n## Step 2: Calculate the change\nTo find the change, we subtract the total cost of the items from the amount paid. change = $50 - $45 = $5.\n\nThe final answer is: $\\boxed{5}$",
+    "is_correct": true,
+    "type": "money_word"
+  }
+]

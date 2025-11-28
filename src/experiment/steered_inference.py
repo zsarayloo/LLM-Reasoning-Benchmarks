@@ -61,13 +61,20 @@ def _make_steering_hook(alpha: float):
     at layer LAYER_IDX.
     """
     def hook(module, inputs, output):
-        # output can be Tensor or tuple; LLaMA uses Tensor
-        hidden = output
-        # clone to avoid in-place on shared tensor
-        hidden = hidden.clone()
-        # add to last time step for all batch items
-        hidden[:, -1, :] = hidden[:, -1, :] + alpha * v
-        return hidden
+        # output can be Tensor or tuple; handle both cases
+        if isinstance(output, torch.Tensor):
+            hidden = output.clone()
+            # add to last time step for all batch items
+            hidden[:, -1, :] = hidden[:, -1, :] + alpha * v
+            return hidden
+        elif isinstance(output, (tuple, list)) and len(output) > 0:
+            hidden = output[0].clone()
+            # add to last time step for all batch items
+            hidden[:, -1, :] = hidden[:, -1, :] + alpha * v
+            # return tuple with modified first element
+            return (hidden,) + output[1:]
+        else:
+            return output
 
     return hook
 

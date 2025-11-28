@@ -1,0 +1,6 @@
+layer,baseline_accuracy,steered_accuracy,improvement,alpha,n_test
+8,0.0,0.0,0.0,1.0,16
+10,0.0,0.0,0.0,1.0,16
+12,0.0,0.0,0.0,1.0,16
+14,0.0,0.0,0.0,1.0,16
+16,0.0,0.0,0.0,1.0,16

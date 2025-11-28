@@ -6,10 +6,10 @@ import numpy as np
 import torch
 
 from experiment.data_loader_livemathbench import load_livemathbench
-#from experiment.analyze_livemathbench_cot_vs_sc import (
-#    normalize_short_answer_str,
-#    verify_math_answer,
-#)
+from experiment.analyze_livemathbench_cot_vs_sc import (
+    normalize_answer_str as normalize_short_answer_str,
+    verify_math_answer,
+)
 
 # ---------------------------------------------------------------------
 # Make sure we can import from project root and src/
@@ -118,10 +118,9 @@ def get_hidden(prompt: str) -> torch.Tensor:
 def main() -> None:
     global H_pos, H_neg
 
-    # 1) Load a small subset of LiveMathBench to start
-    #    You can change n_samples later (e.g. 100)
+    # 1) Load a larger subset of LiveMathBench for robust reasoning vector
     all_examples = load_livemathbench(split="all")
-    n_samples = 50
+    n_samples = 200  # Increased from 50 for better signal
     examples = all_examples[:n_samples]
 
     print(f"[collect_reasoning_data] Using {len(examples)} examples from LiveMathBench")
@@ -176,5 +175,3 @@ def main() -> None:
 
     print(f"[collect_reasoning_data] Saved H_pos.npy and H_neg.npy to {PROJECT_ROOT}")
     print(f"  H_pos shape: {H_pos_arr.shape}, H_neg shape: {H_neg_arr.shape}")
-
-
