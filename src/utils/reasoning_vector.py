@@ -12,3 +12,5 @@ def build_pca_vector(H_pos, H_neg):
     pca = PCA(n_components=1)
     pca.fit(diffs)
     return pca.components_[0]    # shape: (d,)
+def last_token(h):
+    return h[0, -1, :].numpy()
